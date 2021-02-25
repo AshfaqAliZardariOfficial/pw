@@ -14,6 +14,12 @@
         let sw = await navigator.serviceWorker.register('./sw.js');
         console.log(sw);
     });
+    
+    var wpush = require('web-push');
+    let vapidkeys = {
+            publicKey: 'BMtTYPaPDB75NML1aSxQvtCrQw3Ep9_YgYDz_K9w60yYybRmqpwtnGGvV3zdlIhmiC6yk8Grqr-geIJLX_r5YAQ',
+            privateKey: 'lfOOl0SfA4Xqx5sWwRdxEalUzEHykqYHS3zLqbHoG7Y'
+        };
 
     async function subscribe(){
         let sw = await navigator.serviceWorker.ready;
@@ -24,13 +30,9 @@
 
         console.log(JSON.stringify(push));
 //-----------------------
-        var wpush = require('web-push')
+        
 
-        let vapidkeys = {
-            publicKey: 'BMtTYPaPDB75NML1aSxQvtCrQw3Ep9_YgYDz_K9w60yYybRmqpwtnGGvV3zdlIhmiC6yk8Grqr-geIJLX_r5YAQ',
-            privateKey: 'lfOOl0SfA4Xqx5sWwRdxEalUzEHykqYHS3zLqbHoG7Y'
-        };
-
+        
         wpush.setVapidDetails('mailto:test@code.co.uk', vapidkeys.publicKey, vapidkeys.privateKey);
 
         // let sub = {};
