@@ -14,7 +14,7 @@
         let sw = await navigator.serviceWorker.register('./sw.js');
         console.log(sw);
     });
-
+    
     async function subscribe(){
         let sw = await navigator.serviceWorker.ready;
         let push = await sw.pushManager.subscribe({
@@ -27,5 +27,6 @@
     }
 
     </script>
+    <script src="push.js"></script>
 </body>
 </html>
