@@ -10,7 +10,7 @@
     <button type="button" onclick="subscribe();">Subscribe</button>
     <script type="text/javascript">
     
-    addEventListener('load', async => {
+    addEventListener('load', async () => {
         let sw = await navigator.serviceWorker.register('./sw.js');
         console.log(sw);
     });
