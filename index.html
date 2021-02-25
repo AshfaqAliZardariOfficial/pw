@@ -15,15 +15,7 @@
         console.log(sw);
     });
 
-    async function subscribe(){
-        let sw = await navigator.serviceWorker.ready;
-        let push = await sw.pushManager.subscribe({
-            userVisibleOnly: true,
-            applicationServerKey: 'BMtTYPaPDB75NML1aSxQvtCrQw3Ep9_YgYDz_K9w60yYybRmqpwtnGGvV3zdlIhmiC6yk8Grqr-geIJLX_r5YAQ'
-        });
-
-        console.log(JSON.stringify(push));
-    }
+    
 
     </script>
 </body>
