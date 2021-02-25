@@ -17,7 +17,7 @@ async function subscribe(){
     });
 
     console.log(JSON.stringify(push));
-    let sub = JSON.stringify(push);
+    var sub = JSON.stringify(push);
     push.sendNotification(sub, 'Test Message');
 }
 
